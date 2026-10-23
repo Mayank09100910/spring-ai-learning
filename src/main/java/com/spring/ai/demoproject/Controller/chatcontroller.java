@@ -1,12 +1,10 @@
 package com.spring.ai.demoproject.Controller;
-
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 @RestController
 @RequestMapping
 public class chatcontroller {
@@ -16,7 +14,7 @@ public class chatcontroller {
     }
     @GetMapping("/chat")
     public ResponseEntity<String> chat(@RequestParam(value="q",required=true) String query) {
-        var result=chatClient.prompt(query).call().content();
+        String result=chatClient.prompt(query).call().content();
         return ResponseEntity.ok(result);
     }
 }
