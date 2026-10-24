@@ -52,3 +52,32 @@ We add the Stater
 Auto-configuration kicks in
 .OpenAiChatAutoConfiguration is loaded (if spring.ai.model.chat=openai,which is the default) It binds your properties and creates a singleton OpenAiChatModel bean for you.
 
+## Import AI concepts
+
+=>Model: Ai Models are tools that learn from data to genrate things like text,images,speech or embeddings.
+Spring ai supports many types including text,image,embedding,audio(turning text into numbers for advanced tasks)
+Many supported models come pre-trained -like gpt - so you can use them right away without traning your own
+
+=>Prompts: A prompt is what you tell the Ai-model -like a question or an instruction.
+In spring-Ai ,prompts can have placeholders (ex; {name} ) which get filled with real values when you run your app-kind of like templates
+=> Underlying Apis&Abstractions
+.Spring Ai offers unified,reusable ApIs to handle:
+client connections
+vector database 
+tool/function calling
+observability
+Auto-configured and Spring boot starters
+RAG patterns
+
+=>Tokens
+Tokens are the smallest piece of text that an Ai Model understands
+A token can be word ,part of a word,or even punctutaion.
+ex=>unbelievable-> might split into ["un","believe","able"].
+
+# Multiple model together
+
+.Task Specialization
+.Reliability
+.Experimantation
+.User choice
+.complementary strength
