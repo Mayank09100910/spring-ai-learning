@@ -37,7 +37,7 @@ public class chatcontroller {
         this.chatserviceimp=chatserviceimp;
     }
     @GetMapping("/chat")
-    public ResponseEntity<List<tut>> chat(@RequestParam(value="q",required=true) String q){
+    public ResponseEntity<String> chat(@RequestParam(value="q",required=true) String q){
         return ResponseEntity.ok(chatserviceimp.chat(q));
     }
 }
